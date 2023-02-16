@@ -633,7 +633,7 @@ function loadMap() {
             // div.appendChild(arrow);
            
             var defualtImg = this._arrow = document.createElement("img");
-            defualtImg.src = "../src/mapMarker_Default.png";
+            defualtImg.src = "./src/mapMarker_Default.png";
             defualtImg.style.position = "absolute";
             defualtImg.style.width = "100%";
             defualtImg.style.height = "100%";
@@ -643,7 +643,7 @@ function loadMap() {
             div.appendChild(defualtImg);
 
             var hoverImg = document.createElement("img");
-            hoverImg.src = "../src/mapMarker_Hover.svg";
+            hoverImg.src = "./src/mapMarker_Hover.svg";
             hoverImg.style.position = "absolute";
             hoverImg.style.width = "100%";
             hoverImg.style.height = "100%";
