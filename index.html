@@ -1,0 +1,196 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>ThreeJS-Test1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Poppins:wght@500&family=Quicksand:wght@300;400;500;600;700&family=Quintessential&display=swap"
+        rel="stylesheet">
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Poppins:wght@500&family=Quicksand:wght@300;400;500;600;700&family=Quintessential&display=swap'); */
+        @import url(./css/style.css);
+        @import url(./css/component.css);
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script> -->
+    <script src="./js/jquery.js"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="https://api.map.baidu.com/api?type=webgl&v=1.0&ak=n6Tz4SMCvSZYUNv0ledMBaMLDBsZDDzu"></script>
+    <script src="https://mapv.baidu.com/gl/examples/static/common.js"></script>
+
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="logo">
+            <img src="./src/Logo.png" alt="">
+        </div>
+        <div class="nav-text">
+            <div class="nav-text-item">Home</div>
+            <div class="nav-text-item">About</div>
+            <div class="nav-text-item">Contact</div>
+        </div>
+        <div class="nav-hamburger" onclick="hamnavFunc()">
+            <div class="ham-bar bar-top"></div>
+            <div class="ham-bar bar-mid"></div>
+            <div class="ham-bar bar-bottom"></div>
+        </div>
+    </div>
+
+
+    <!-- <div id="sidebar">
+
+        <div class="side-dots active">
+            <svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <circle fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="10,10"
+                    cx="50" cy="50" r="50">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="5s"
+                        from="0 50 50" to="-360 50 50" repeatCount="indefinite" />
+                </circle>
+            </svg>
+            
+            <li class="dot" id="dot-first" ></li>
+            <li class="dot" id="dot-second"></li>
+            <li class="dot" id="dot-third" ></li>
+        </div>
+        <div class="side-text">
+            <li class="side-text-item" id="text-first"  onclick="selectStage(0, '25%')">Feelings</li>
+            <li class="side-text-item" id="text-second" onclick="selectStage(1, '50%')">Environment</li>
+            <li class="side-text-item" id="text-third"  onclick="selectStage(2, '75%')">Methods</li>
+        </div>
+    </div> -->
+
+    <img id="background" src="./src/BackgroundImg.jpg" alt="">
+
+    <div id="svg-box" class="center">
+        <embed id="raindrop-box" src="./src/AnimaSVG.svg" type="">
+    </div>
+
+    <div class="page" id="page1">
+        <!-- <img src="./src/BackgroundImg.jpg" alt=""> -->
+        <div class="text1-box center">
+            <h1>Do you always feel anxious to the intensive bad news</h1>
+        </div>
+
+        <div id="info2">
+            <!-- <div class="logo-box center">
+                <embed id="logo-center" src="./src/CenterLogo.svg"></embed>
+            </div> -->
+            <!-- <div class="text2-box">
+                <h1>We are here to help you</h1>
+                <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+                    excepteur sint.</h2>
+                <button>Know more</button>
+            </div> -->
+        </div>
+
+    </div>
+
+    <div class="page" id="page2">
+        <!-- <div class="logo-box center">
+            <embed src="./src/CenterLogo.svg"></embed>
+        </div> -->
+        <div class="text2-box">
+            <h1>We are here to help you</h1>
+            <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+                excepteur sint.</h2>
+            <button>Know more</button>
+        </div>
+    </div>
+
+    <div class="page" id="page3">
+        <div class="page3-text-box center">
+            <h1>We can help you to</h1>
+        </div>
+        <div class="solution-list-box">
+            <div class="solution-item" id="item1">
+                <!-- <embed src="./src/seed.svg" type=""> -->
+                <h1>Know yourself</h1>
+                <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</h2>
+            </div>
+            <div class="solution-item" id="item2">
+                <!-- <embed src="./src/seed.svg" type=""> -->
+                <h1>Know the truth</h1>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h2>
+            </div>
+            <div class="solution-item" id="item3">
+                <!-- <embed src="./src/seed.svg" type=""> -->
+                <h1>Know the way</h1>
+                <h2>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="page4">
+        <div id="board">
+            <img src="./src/Board.png" alt="">
+            <embed id="cards" src="./src/Cards.svg" type="">
+            <embed id="addCard" src="./src/AddCard.svg" type="">
+            <textarea id="inputBox" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div id="page4-text-box">
+            <h1>You can try to<br />describe your feeling</h1>
+            <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</h1>
+        </div>
+    </div>
+
+    <div class="page" id="page5">
+        <div id="page5-text-box">
+            <h1>Let’s try to figure out<br />the truth </h1>
+            <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut.</h1>
+        </div>
+        <div id="circle">
+            <!-- <svg width="779" height="742" viewBox="0 0 779 742" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="Dot" id="Dot1" cx="82" cy="213.5" r="30" fill="#D9D9D9" />
+                <circle class="Dot" id="Dot2" cx="37" cy="360" r="30" fill="#D9D9D9" />
+                <circle class="Dot" id="Dot3" cx="75" cy="525" r="30" fill="#D9D9D9" />
+                <circle id="Orbit" cx="408" cy="371" r="369" stroke="#D9D9D9" stroke-width="4" />
+                <path id="Orbit" d="M771 363.5C771 567.336 611.751 732.5 408 732.5C204.225 732.5 41.5 567.311 41.5 363.5C41.5 159.7 198.214 2 402 2C605.847 2 771 159.76 771 363.5Z" stroke="#D9D9D9" stroke-width="4"/>
+                <circle id="ShowingSpace" cx="407" cy="370.5" r="250" fill="#D9D9D9" />
+                <circle id="Selector" cx="82" cy="213.5" r="60" fill="#565555" />
+            </svg> -->
+
+            <svg width="766" height="733" viewBox="0 0 766 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle id="Orbit" cx="399.5" cy="366.5" r="364.5" stroke="#D9D9D9" stroke-width="4" />
+                <ellipse id="ShowingSpace" cx="400" cy="366.5" rx="232" ry="232.5" fill="#D9D9D9" />
+                <circle class="Dot" id="Dot3" cx="111" cy="589" r="37" fill="#D9D9D9" />
+                <circle class="Dot" id="Dot2" cx="37" cy="367" r="37" fill="#D9D9D9" />
+                <ellipse class="Dot" id="Dot1" cx="111" cy="145.5" rx="37" ry="37.5" fill="#D9D9D9" />
+                <circle id="Selector" cx="111" cy="146" r="67" fill="#6D6D6D" />
+                <path id="Path"
+                    d="M111 146C55.6572 223.057 39.0596 272.12 37 370.5C40.8493 471.505 59.1494 518.099 109 590.5"
+                    stroke="#D9D9D9" />
+            </svg>
+
+        </div>
+    </div>
+
+    <div class="page" id="page6">
+        <div id="map"></div>
+        <div id="page6-text-box">
+            <h1>Let’s find out the<br />way to take action</h1>
+            <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut.</h1>
+        </div>
+    </div>
+
+    <section id="triggerSection"></section>
+
+    <script type="module" src="./js/index.js"></script>
+    <script src="./js/component.js"></script>
+
+</body>
+
+</html>

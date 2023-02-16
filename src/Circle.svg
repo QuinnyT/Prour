@@ -1,0 +1,11 @@
+<svg width="766" height="733" viewBox="0 0 766 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Circle">
+<path id="Vector" d="M111 146C55.6572 223.057 39.0596 272.12 37 370.5C40.8493 471.505 59.1494 518.099 109 590.5" stroke="#D9D9D9"/>
+<circle id="Orbit" cx="399.5" cy="366.5" r="364.5" stroke="#D9D9D9" stroke-width="4"/>
+<ellipse id="ShowingSpace" cx="400" cy="366.5" rx="232" ry="232.5" fill="#D9D9D9"/>
+<circle id="Dot3" cx="111" cy="589" r="37" fill="#D9D9D9"/>
+<circle id="Dot2" cx="37" cy="367" r="37" fill="#D9D9D9"/>
+<ellipse id="Dot1" cx="111" cy="145.5" rx="37" ry="37.5" fill="#D9D9D9"/>
+<circle id="Selector" cx="111" cy="146" r="67" fill="#6D6D6D"/>
+</g>
+</svg>
