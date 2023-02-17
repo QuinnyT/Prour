@@ -609,8 +609,8 @@ function loadMap() {
             // div.style.backgroundColor = "#EE5D5B";
             // div.style.border = "1px solid #BC3B3A";
             div.style.color = "white";
-            div.style.width = "51.5px";
-            div.style.height = "34px";
+            div.style.width = "77.25px";
+            div.style.height = "51px";
             // div.style.padding = "2px";
             // div.style.lineHeight = "18px";
             // div.style.whiteSpace = "nowrap";
@@ -668,11 +668,13 @@ function loadMap() {
             //     display: "none",
             //     duration: 0.5 
             //   })
-              gsap.to(hoverImg, {
-                display: "block",
-                opacity: 1,
-                duration: 0.5
-              })
+
+            //   gsap.to(hoverImg, {
+            //     display: "block",
+            //     opacity: 1,
+            //     duration: 0.5
+            //   })
+
             //   this.style.borderColor = "#0000ff";
             //   this.getElementsByTagName("span")[0].innerHTML = that._overText;
             //   arrow.style.backgroundPosition = "0px -20px";
@@ -685,11 +687,13 @@ function loadMap() {
                 height: that._size[1] + "px",
                 duration: 0.5 
               })
-              gsap.to(hoverImg, {
-                opacity: 0,
-                display: "none",
-                duration: 0.5
-              })
+
+            //   gsap.to(hoverImg, {
+            //     opacity: 0,
+            //     display: "none",
+            //     duration: 0.5
+            //   })
+
             //   gsap.to(defualtImg, {
             //     display: "block",
             //     opacity: 1,
@@ -712,8 +716,8 @@ function loadMap() {
           }
           var txt = "银湖海岸城", mouseoverTxt = txt + " " + parseInt(Math.random() * 1000,10) + "套" ;
               
-          var community1 = new ComplexCustomOverlay(new BMapGL.Point(114.065629,22.559708), "莲花山公园",mouseoverTxt, [100, 34]);
-          var community2 = new ComplexCustomOverlay(new BMapGL.Point(114.078134,22.543353), "岗厦村",mouseoverTxt, [51.5, 34]);
+          var community1 = new ComplexCustomOverlay(new BMapGL.Point(114.065026,22.559388), "莲花山公园",mouseoverTxt, [77.25, 51]);
+          var community2 = new ComplexCustomOverlay(new BMapGL.Point(114.082812,22.530799), "皇城广场",mouseoverTxt, [77.25, 51]);
       
           myMap.addOverlay(community1);
           myMap.addOverlay(community2);
